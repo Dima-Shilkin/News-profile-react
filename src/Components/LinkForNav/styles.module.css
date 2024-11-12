@@ -1,0 +1,14 @@
+.navLink {
+  color: rgb(63, 14, 14);
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: rgb(179, 101, 101);
+  scale: 1.1;
+}
+
+.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
