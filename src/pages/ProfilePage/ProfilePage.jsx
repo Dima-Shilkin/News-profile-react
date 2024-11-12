@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getUser } from "../../api/api";
 import styles from "./styles.module.css";
+import Loading from "../../Components/Loading/Loading";
 
 export const ProfilePage = () => {
   const [user, setUser] = useState(null);
@@ -20,7 +21,7 @@ export const ProfilePage = () => {
 
   return (
     <div className={styles.userConteiner}>
-      <h2>Ваш профиль</h2>
+      <h2>Данные вашего профиля</h2>
       {user ? (
         <ul className={styles.list}>
           <li>Имя: {user.name}</li>
@@ -30,7 +31,7 @@ export const ProfilePage = () => {
           <li>Улица: {user.address.street}</li>
         </ul>
       ) : (
-        <p>Загрузка</p>
+        <Loading />
       )}
     </div>
   );
